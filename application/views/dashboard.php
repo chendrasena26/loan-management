@@ -66,6 +66,7 @@
                     else if($key['angsuran_3'] == 0) {echo "Lunas";} else echo "Rp" . number_format($key['angsuran_3'],2,',','.'); ?></td>
                     <!-- <td><?php echo $key['keterangan'];?></td> -->
                     <td>
+                      <a class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Ubah Status Angsuran" href="<?php echo base_url('transaksi/changestatus/'.$key['no_transaksi']); ?>" role="button"><i class="fas fa-check"></i></a>
                       <a class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit" href="<?php echo base_url('transaksi/edit/'.$key['no_transaksi']); ?>" role="button"><i class="fas fa-pencil-alt"></i></a>
                       <a class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus" href="<?php echo base_url('transaksi/delete/'.$key['no_transaksi']); ?>" role="button"><i class="fas fa-trash-alt"></i></a>
                     </td>
@@ -82,7 +83,7 @@
             <!-- ============================================================== -->
             <br><br><br><br><br><br><br><br><br>
             <footer class="footer text-center">
-                
+                <div class="col-md-4 ml-auto text-right"><a class="btn btn-danger col-md-3 btn-sm" href="<?php echo base_url('dashboard/logout')?>" role="button">Keluar</a></div>
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

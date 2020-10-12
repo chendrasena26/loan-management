@@ -23,6 +23,12 @@ class Dashboard extends CI_Controller {
 
 	 	$this->load->view('dashboard',$data);
 	 }
+
+	 public function logout()
+	 {
+	 	$this->session->sess_destroy();
+		redirect(base_url());
+	 }
 }
 
 ?>

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png')?>">
-    <title>Tambah Transaksi</title>
+    <title>Ubah Status Angsuran</title>
     
     <!-- Custom CSS -->
     <link href="<?php echo base_url('assets/libs/flot/css/float-chart.css')?>" rel="stylesheet">
@@ -25,44 +25,26 @@
         <div class="card">
           <br>
           <div class="col-md-12" style="text-align: center; margin-left: 4%"><h3>Tambah Transaksi</h3></div>
-            <?php echo form_open(base_url('transaksi/create'), 'class="form-horizontal"' ); ?>
+            <?php echo form_open(base_url('transaksi/changestatus/'.$transaksi[0]['no_transaksi']), 'class="form-horizontal"' ); ?>
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="nik" class="col-sm-4 text-right control-label col-form-label">NIK</label>
+                        <label for="angsuran" class="col-sm-4 text-right control-label col-form-label">Angsuran</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="nik" name="nik">
+                            <input type="radio" id="angsuran1" name="angsuran" value="1">
+                            <label for="male">Angsuran 1</label><br>
+                            <input type="radio" id="angsuran2" name="angsuran" value="2">
+                            <label for="female">Angsuran 2</label><br>
+                            <input type="radio" id="angsuran3" name="angsuran" value="3">
+                            <label for="other">Angsuran 3</label>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="nama" class="col-sm-4 text-right control-label col-form-label">Nama</label>
+                        <label for="sisa" class="col-sm-4 text-right control-label col-form-label">Sisa</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="nama" name="nama">
+                            <input type="text" class="form-control" id="sisa" name="sisa">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="tanggal" class="col-sm-4 text-right control-label col-form-label">Tanggal</label>
-                        <div class="col-sm-5">
-                            <input type="date" class="form-control" id="tanggal" name="tanggal">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="barang" class="col-sm-4 text-right control-label col-form-label">Barang</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" id="barang" name="barang">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="harga" class="col-sm-4 text-right control-label col-form-label">Harga</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" id="harga" name="harga">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="keterangan" class="col-sm-4 text-right control-label col-form-label">Keterangan</label>
-                        <div class="col-sm-5">
-                            <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Misal: Cabang"></textarea>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="border-top">
                     <div class="card-body" style="margin-left: 47%">

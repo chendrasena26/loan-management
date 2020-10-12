@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url('assets/images/favicon.png')?>">
-    <title>Tambah Transaksi</title>
+    <title>Edit Transaksi</title>
     
     <!-- Custom CSS -->
     <link href="<?php echo base_url('assets/libs/flot/css/float-chart.css')?>" rel="stylesheet">
@@ -25,48 +25,48 @@
         <div class="card">
           <br>
           <div class="col-md-12" style="text-align: center; margin-left: 4%"><h3>Tambah Transaksi</h3></div>
-            <?php echo form_open(base_url('transaksi/create'), 'class="form-horizontal"' ); ?>
+            <?php echo form_open(base_url('transaksi/edit/'.$transaksi[0]['no_transaksi']), 'class="form-horizontal"' ); ?>
                 <div class="card-body">
                     <div class="form-group row">
                         <label for="nik" class="col-sm-4 text-right control-label col-form-label">NIK</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="nik" name="nik">
+                            <input type="text" value="<?php echo $transaksi[0]['nik'] ?>" class="form-control" id="nik" name="nik">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="nama" class="col-sm-4 text-right control-label col-form-label">Nama</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="nama" name="nama">
+                            <input type="text" value="<?php echo $transaksi[0]['nama'] ?>" class="form-control" id="nama" name="nama">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="tanggal" class="col-sm-4 text-right control-label col-form-label">Tanggal</label>
                         <div class="col-sm-5">
-                            <input type="date" class="form-control" id="tanggal" name="tanggal">
+                            <input type="date" value="<?php echo $transaksi[0]['tanggal'] ?>" class="form-control" id="tanggal" name="tanggal">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="barang" class="col-sm-4 text-right control-label col-form-label">Barang</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="barang" name="barang">
+                            <input type="text" value="<?php echo $transaksi[0]['barang'] ?>" class="form-control" id="barang" name="barang">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="harga" class="col-sm-4 text-right control-label col-form-label">Harga</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" id="harga" name="harga">
+                            <input type="text" value="<?php echo $transaksi[0]['harga'] ?>" class="form-control" id="harga" name="harga">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="keterangan" class="col-sm-4 text-right control-label col-form-label">Keterangan</label>
                         <div class="col-sm-5">
-                            <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Misal: Cabang"></textarea>
+                            <textarea class="form-control" id="keterangan"  name="keterangan" placeholder="Misal: Cabang"><?php echo $transaksi[0]['keterangan'] ?></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="border-top">
                     <div class="card-body" style="margin-left: 47%">
-                        <button type="submit" value="masuk" name="submit" class="btn btn-primary">Tambah</button>
+                        <button type="submit" value="masuk" name="submit" class="btn btn-primary">Edit</button>
                         <a class="btn btn-secondary" href="<?php echo base_url('dashboard')?>" role="button">Batal</a>
                     </div>
                 </div>
